@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-ivory: #FFF9F3;
+  --color-blush: #F2D6D7;
+  --color-dustyRose: #D6A0A6;
+  --color-burgundy: #702D42;
+  --color-gold: #C8A46B;
+  --color-warmDark: #38272B;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F3;
+}
+::-webkit-scrollbar-thumb {
+  background: #D6A0A6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #BD8289;
+}
+
+/* Smooth Scrolling & Typography default */
+html {
+  scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+/* Paper Texture subtle effect */
+.bg-paper-texture {
+  background-color: #FFF9F3;
+  background-image: radial-gradient(#d6a0a615 1px, transparent 1px), radial-gradient(#702d420a 1px, #FFF9F3 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+}
+
+.bg-parchment {
+  background: #fffcf8;
+  background-image: 
+    linear-gradient(rgba(214, 160, 166, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(214, 160, 166, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle Gold Foil Accent */
+.gold-foil-text {
+  background: linear-gradient(135deg, #AF8A51 0%, #E5CA95 50%, #A68249 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border {
+  border-image: linear-gradient(to right, transparent, #C8A46B, transparent) 1;
+}
+
+/* Delicate Rose Petal Canvas Styling */
+.petals-container {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  overflow: hidden;
+}
+
+/* Wax Seal Button Style */
+.wax-seal {
+  background: radial-gradient(circle at 35% 35%, #8B3851 0%, #702D42 60%, #461726 100%);
+  box-shadow: 0 4px 14px rgba(70, 23, 38, 0.4), inset 0 2px 4px rgba(255, 255, 255, 0.3), inset 0 -2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Glassmorphism panel */
+.glass-panel {
+  background: rgba(255, 249, 243, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(214, 160, 166, 0.35);
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
